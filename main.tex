@@ -100,6 +100,14 @@
   per-mode=symbol-or-fraction, % / in inline math, fraction in display math
 ]{siunitx}
 
+\usepackage[
+  german,
+  unicode,        % Unicode in PDF-Attributen erlauben
+  pdfusetitle,    % Titel, Autoren und Datum als PDF-Attribute
+  pdfcreator={},  % ┐ PDF-Attribute säubern
+  pdfproducer={}, % ┘
+]{hyperref}
+
 \usepackage{graphicx}% Include Figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
@@ -120,7 +128,7 @@
 
 \preprint{APS/123-QED}
 
-\title{Measurement of lepton universality in\\ $b \to s l^+ l^-$ decays}% Force line breaks with \\
+\title{{Measurement of lepton flavor universality in\\ $b \to s {\ell}^{-} {\ell}^{+}$ decays}}% Force line breaks with \\
 %\thanks{A footnote to the article title}%
 
 \author{Moritz Bosse}
@@ -162,34 +170,34 @@
 
 %\tableofcontents
 
-The Standard Model (SM) is the most successful theory for describing the fundamental particles and their interactions, excluding gravity.
+The Standard Model (SM) is the most successful theory for describing the fundamental particles and their interactions, excluding gravity \cite{buchmüller2006field,PhysRevLett.19.1264}.
 It has been extensively tested through numerous experiments and has provided highly precise predictions that match experimental observations. Phenomena such as Dark Matter, Baryon asymmetry or
 massive neutrinos are pointing towards a more fundamental UV-complete theory. %the SM has shortcomings and that we are far from having a full UV-complete theory. 
 A very sensitive probe to test New Physics is through high precision measurements, where small deviations from the SM could arise 
 through unknown beyond the Standard Model (BSM) particles or mechanisms. 
 \\
-Within the Standard Model, the gauge Bosons have identical coupling constants to all three families of leptons ($e$, $\mu \and \tau$),
-which is known as Lepton Universality (LU). Decays into different dilepton final states should then only differ by their respective masses. 
+Within the Standard Model, the gauge Bosons have identical coupling constants to all three families of leptons ($e$, $\mu$ $~\&~$ $\tau$),
+which is known as Lepton Flavor Universality (LFU). Decays into different dilepton final states should then only differ by their respective masses. 
 \newline
-Up to now, there is no known reason behind the necessity for LU, however it has been observed experimentally at per mille levels 
-in W and Z boson decays .. cite. Since there is no fundamental law (as far as we know) that forces BSM particles to couple equally to all
-lepton flavors, one can gain insight and constrain possible BSM theories by the measurement of LU aswell as provide more evidence for the accurary of SM predictions.
+Up to now, there is no known reason behind the necessity for LFU, however it has been observed experimentally at per mille levels 
+in W and Z boson decays \cite{PhysRevLett.68.3398,Abachi_1995}. Since there is no fundamental law (as far as we know) that forces BSM particles to couple equally to all
+lepton flavors, one can gain insight and constrain possible BSM theories by the measurement of LFU aswell as provide more evidence for the accurary of SM predictions.
 \newline
-In the recent years there have been a number of LU measurements in $b \to s l^+ l^-$
+In the recent years there have been a number of LFU measurements in $b \to s {\ell}^{-} {\ell}^{+}$
 transitions (cite) that throughout show a pattern of deviations from the SM predictions. 
-Most notably the measurement using $B^+ \to K^+ l^+ l^-$ decays, showing $3.1 \sigma$ significance ....
-The broad consensus is ... that such deviations can not be explained by theoretical uncertainies, 
-so it is off special interest to study LU in these transitions. In this paper, a simultaneous test of muon-electron
-universality in non-resonant $B^+ \to K^+ l^+ l^-$ and $B^0 \to K^{\star 0} l^+ l^-$ decays unsing LHCb data is presented.
+Most notably the measurement using $B^+ \to K^+ {\ell}^{-} {\ell}^{+}$ decays, showing $3.1 \sigma$ significance \cite{blhcb}.
+The broad consensus is \cite{Bordone_2016,Isidori_2020} that such deviations can not be explained by theoretical uncertainies, 
+so it is off special interest to study LFU in these transitions. In this paper, a simultaneous test of muon-electron
+universality in non-resonant $B^+ \to K^+ {\ell}^{-} {\ell}^{+}$ and $B^0 \to K^{\star 0} {\ell}^{-} {\ell}^{+}$ decays unsing LHCb data is presented.
 \newline
-The Large Hadron Collider beauty (LHCb) is one of the four big experiments at the Large Hadron Collider (LHC) at CERN. It is a single-arm forward
+The Large Hadron Collider beauty experiment(LHCb) \cite{LHCb:2008vvz} is one of the four big experiments at the Large Hadron Collider (LHC) at CERN. It is a single-arm forward
 spectrometer covering a pseudorapidity between $2 < \eta < 5$ and is mainly used to investigate b (beauty) and c (charm) quarks.
 The proton-proton collisions take place within the Vertex Locater (VELO) where primary aswell as secondary vertices can be distinguished and precisely reconstructed.
 Through the combination of a $\SI{4}{\tesla\meter}$ dipole magnet and multiple tracking stations (TT, T1-T3), the charge and momentum of the particle can be measured.
 For the full particle identification, Cherenkov detectors (RICH), different Calorimeters (ECAL, HCAL) and alternating layers of iron and multiwire proportional chambers to measure muons are used.
 To reduce the amount of data produced from the pp collisions, a hardware trigger (L0) based on calorimeter and muon system parameters, followed by a software trigger (HLT) that selects events based on a full event reconstruction is implemented.
 \newline
-To measure LU the observable $R$ is constructed as follows
+To measure LFU the observable $R$ is constructed as follows
 \begin{equation}
     \label{eqn:1}
     R_{K, K^*}\left(q_a^2, q_b^2\right)=\frac{\int_{q_a^2}^{q_b^2} \frac{\mathrm{d} \Gamma\left(B^{(+, 0)} \rightarrow K^{(+, * 0)} \mu^{+} \mu^{-}\right)}{\mathrm{d} q^2} \mathrm{~d} q^2}{\int_{q_a^2}^{q_b^2} \frac{\mathrm{d} \Gamma\left(B^{(+, 0)} \rightarrow K^{(+, * 0)} e^{+} e^{-}\right)}{\mathrm{d} q^2} \mathrm{~d} q^2}.
@@ -198,10 +206,10 @@ These observables are measured in two $q^2$ regions: $0.1<q^2<1.1 \mathrm{GeV}^2
 The central $q^2$ region excludes light meson resonances in the lower limit and the $J/\Psi$ resonance above $6.0 \mathrm{GeV}^2$. In previous measurements the lower limit of the low $q^2$ region 
 included the dimuon mass threshhold of $0.045 \mathrm{GeV}^2 / c^4$, which is now pushed upwards.
 This is done to reduce the form-factor and charm loop uncertainties 
-that occur near the photon pole .. .
-The biggest remaining uncertainies stem from modelling radiative effects .....
+that occur near the photon pole \cite{Hiller_2004}.
+The biggest remaining uncertainies stem from modelling radiative effects \cite{davidson2015photos}.
 \\
-Previous deviations in $R_{K, K^*}$ ... showed a coherent pattern, motivating theoretical heavy BSM contributions. Different examples are shown using the typical EFT framework in Figure \ref{fig:1}.
+Previous deviations in $R_{K, K^*}$ \cite{blhcb,Lees_2012} showed a coherent pattern, motivating theoretical heavy BSM contributions. Different examples are shown using the typical EFT framework in Figure \ref{fig:1}.
 To produce a deviation in $R_{K, K^*}$, new contributions to the Wilson coefficients $\mathcal{C}_9$ (vector-like) and $\mathcal{C}_{10}$ (axial vector-like) are proposed.
 \begin{figure}
     \centering
@@ -237,15 +245,15 @@ The primary objective of this algorithm is to restore the momentum that has been
  when contrasted with the performance in muon modes. Consequently, it becomes crucial to manage potential background contamination in the electron mode.
 \\
 Two other crucial aspects are the limited resolution of the electromagnetic calorimeter and the reduced L0 trigger efficiency for electrons. 
-To tackle the reduced trigger efficiencies, the analysis utilizes a method that merges candidates triggered by the signal electrons with those prompted by other non-signal particles in the event (TIS). 
+To tackle the reduced trigger efficiencies, the analysis utilizes a method that merges candidates triggered by the signal electrons with those prompted by other non-signal particles in the event. 
 This strategy substantially recuperates signal events in cases where the electrons did not satisfy the trigger thresholds in the ECAL.
-A multivariate classifier is employed to differentiate between $B^{(+, 0)} \rightarrow K^{(+, * 0)}l^+ l^-$ decay processes and combinatorial background occurrences using 
+A multivariate classifier is employed to differentiate between $B^{(+, 0)} \rightarrow K^{(+, * 0)}{\ell}^{-} {\ell}^{+}$ decay processes and combinatorial background occurrences using 
 kinematic and vertex quality information.
 The training procedure involves simulated signal events, along with data containing reconstructed B meson invariant masses exceeding $5400 (5600) {\si{\mega\electronvolt}}/c^2$, 
 serving as approximations for muon (electron) combinatorial backgrounds. 
 To increase the dataset, background events from the low- and central-$q^2$ regions are combined.
 Prior to the training phase, preselection and particle identification (PID) criteria are applied, with an equal number of signal and background events.
-A second classifier is trained for the electron modes to seperate signal from the partially reconstructed $B \rightarrow (K, K^{*0})l^+ l^{-}X$ decays, 
+A second classifier is trained for the electron modes to seperate signal from the partially reconstructed $B \rightarrow (K, K^{*0}){\ell}^{-} {\ell}^{+}X$ decays, 
 where $X$ describes an additional hadron. For this kinematic and geometric features of the signal are used. 
 \\
 Both classifiers are optimized simultaneously with the predicted signal significance for SM decay rates, for each $q^2$ region and data taking period.
@@ -255,13 +263,13 @@ Specific vetoes are used to reduce many of these backgrounds. One example for a 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{veto2.png}
-    \caption{Semileptonic veto for backgrounds in the $B^+$ decay mode.}
+    \caption{Semileptonic veto for backgrounds in the $B^+$ decay mode \cite{lhcbcollaboration2022measurement}.}
     \label{fig:2}
 \end{figure}
 % Produces the bibliography via BibTeX.
 One important aspect of the analysis is the accurate determination of efficiencies and the calibration of the simulation. For each data-taking year
 the simulation is calibrated with real data control samples. No single data control sample can account for all the different aspects of the detector 
-performance, so that a multi-step correction is utilized in the following way
+performance, so that a multi-step correction is utilized \cite{hier1,hier2} in the following way
 \begin{equation*}
 \omega_i = \frac{\epsilon_{\text{Data}}}{\epsilon_{\text{Simulation}}}.
 \end{equation*}
@@ -278,28 +286,28 @@ uncertainties in the efficiencies. The final observable is hence constructed fro
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{eff.png}
-    \caption{Calibration of efficiencies in the single and double ratios for the resonant decay modes.}
+    \caption{Calibration of efficiencies in the single and double ratios for the resonant decay modes \cite{lhcbcollaboration2022measurement}.}
     \label{fig:3}
 \end{figure}
 After all selection criteria have been applied, the nonresonant muon samples
 contain only signal and combinatorial backgrounds. The invariant mass spectrum of
 the nonresonant muon signals is modeled using simulated data, while the combinatorial
 background is modeled using an exponential fit.
-The nonresonant electron samples have a higher complexity owing to migration from the resonant $J$/$\Psi$ decay into the central $q^2$ region, residual
-misidentified hadronic decays or partially reconstructed background without misidentification.
+The nonresonant electron samples have a higher complexity owing to the migration from resonant $J$/$\Psi$ decays into the central $q^2$ region. Additionaly, it is important to take the residual
+misidentified hadronic decays and partially reconstructed background without misidentification into account.
 The invariant mass spectrum for the electron decays are modelled simillarly. The leakage from the $J$/$\Psi$ decay and the partially reconstructed background
-however are modeled using a kernel-density estimator ... 
+however are modeled using a kernel-density estimator \cite{Cranmer_2001}. 
 that is derived from simulation. The misidentified background is studied individually and the effects are found to be very small. The large number 
 of misidentification prone decays and their poorly understood dynamics can still have a noticable overall contribution, even when compared to the 
 expected statistical sensitivy. They are therefore estimated using data and modeled using an empirical function. 
 The invariant mass distribution for the non-resonant electron decays is depicted in Figure \ref{fig:4}.
-\begin{figure}
+\begin{figure}[ht!]
     \centering
     \includegraphics[width=0.5\textwidth]{mass.png}
-    \caption{Invariant mass distributions of the non-resonant $B^+ \rightarrow K^+ e^+ e^-$ (left) and $B^0 \rightarrow K^{*0} e^+ e^-$ (right) decays.}
+    \caption{Invariant mass distributions of the non-resonant $B^+ \rightarrow K^+ e^+ e^-$ (left) and $B^0 \rightarrow K^{*0} e^+ e^-$ (right) decays \cite{lhcbcollaboration2022measurement}.}
     \label{fig:4}
 \end{figure}
-The final fit using all the mass fits and efficiencies, yields the LU Observables \eqref{eqn:1} in both $q^2$ regions
+The final fit using all the mass fits and efficiencies, yields the LFU Observables \eqref{eqn:1} in both $q^2$ regions
 \begin{equation}
     \begin{array}{r}
     \text{low-} q^2\left\{\begin{array}{l}
@@ -312,23 +320,23 @@ The final fit using all the mass fits and efficiencies, yields the LU Observable
     \end{array}\right.
     \end{array}
     \end{equation}
-All of the four measurements are in agreement to the SM predictions ..., as shown in Figure \ref{fig:5}. 
+All of the four measurements are in agreement to the SM predictions \cite{lhcbcollaboration2022measurement,Bobeth_2007}, as shown in Figure \ref{fig:5}. 
 The overall systematic uncertainies are below 1$\%$ in all cases except for the low $q^2$ region of $R_{K^*}$ where they are 2$\%$.
 The biggest uncertainty here stems from the stability of the single ratios under different kinematic and geometric variables. Another aspect
 is the uncertainty associated with the modelling of the non-resonant decay form-factors, which are found to be around 1$\%$ for $B^0$ decays and negligible 
 for $B^+$ decays. Lastly the modeling of invariant mass distributions gets uncertainies, especially through the data-driven modelling of the misidentified background
 of around $2.0$-$2.5\%$.
-This analyis is the most precise and accurate lepton universality test in $b \rightarrow s l^+ l^-$ transitions up to date. Using a basic $\chi^2$ test on all the measurements 
-show agreement  LFU in the SM to $0.2\sigma$ level. The previous measurement of $R_K$ and $R_{K^*}$ used the same data and hence the large deviation occur 
+This analyis is the most precise and accurate lepton universality test in $b \rightarrow s {\ell}^{-} {\ell}^{+}$ transitions up to date. Using a basic $\chi^2$ test on all the measurements 
+show agreement with LFU in the SM to $0.2\sigma$ level. The previous measurement of $R_K$ and $R_{K^*}$ used the same data and hence the large deviation occur 
 through reducing the systematics. The systematic uncertainties associated
 with these measurements still remain significantly smaller compared to the statistical uncertainties
 and are expected to reduce further with data from the ongoing LHCb Run 3. 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{fit.png}
-    \caption{Comparison of the LU measurements with the SM prediction. The results of
+    \caption{Comparison of the LFU measurements with the SM prediction. The results of
     both observables agree with the
-    SM prediction in both $q^2$ regions.}
+    SM prediction in both $q^2$ regions \cite{lhcbcollaboration2022measurement}.}
     \label{fig:5}
 \end{figure}
 \bibliography{lit} 
